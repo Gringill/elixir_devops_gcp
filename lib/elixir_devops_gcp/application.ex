@@ -11,7 +11,7 @@ defmodule ElixirDevopsGcp.Application do
       # Start the Ecto repository
       supervisor(ElixirDevopsGcp.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(ElixirDevopsGcpWeb.Endpoint, []),
+      supervisor(ElixirDevopsGcpWeb.Endpoint, [])
       # Start your own worker by calling: ElixirDevopsGcp.Worker.start_link(arg1, arg2, arg3)
       # worker(ElixirDevopsGcp.Worker, [arg1, arg2, arg3]),
     ]

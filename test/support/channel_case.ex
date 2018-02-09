@@ -25,13 +25,13 @@ defmodule ElixirDevopsGcpWeb.ChannelCase do
     end
   end
 
-
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(ElixirDevopsGcp.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(ElixirDevopsGcp.Repo, {:shared, self()})
     end
+
     :ok
   end
-
 end

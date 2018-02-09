@@ -6,16 +6,14 @@
 use Mix.Config
 
 # General application configuration
-config :elixir_devops_gcp,
-  ecto_repos: [ElixirDevopsGcp.Repo]
+config :elixir_devops_gcp, ecto_repos: [ElixirDevopsGcp.Repo]
 
 # Configures the endpoint
 config :elixir_devops_gcp, ElixirDevopsGcpWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "qAwQi00aZfRYrgGmYEMVgl4DdwdzPqafOCrADmrmlLiUoTqtAN4WIETipn07Mz1e",
   render_errors: [view: ElixirDevopsGcpWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: ElixirDevopsGcp.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: ElixirDevopsGcp.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -24,4 +22,4 @@ config :logger, :console,
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"
