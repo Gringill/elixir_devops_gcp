@@ -1,0 +1,23 @@
+<h2>Show Todo</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @todo.name %>
+  </li>
+
+  <li>
+    <strong>Desc:</strong>
+    <%= @todo.desc %>
+  </li>
+
+  <li>
+    <strong>Comp:</strong>
+    <%= @todo.comp %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: todo_path(@conn, :edit, @todo) %></span>
+<span><%= link "Back", to: todo_path(@conn, :index) %></span>
